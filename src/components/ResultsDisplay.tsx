@@ -9,10 +9,26 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import categories, { categoryAxes, categoryColors } from "@/data/categories";
-import { CartesianGrid, Cell, ReferenceLine, ResponsiveContainer, Scatter, ScatterChart, Tooltip, TooltipProps, XAxis, YAxis } from "recharts";
+import {
+  CartesianGrid,
+  Cell,
+  ReferenceLine,
+  ResponsiveContainer,
+  Scatter,
+  ScatterChart,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
 import { FileDown, RefreshCw } from "lucide-react";
 
-const CustomTooltip = ({ active, payload }: { active: boolean, payload: any }) => {
+const CustomTooltip = ({
+  active,
+  payload,
+}: {
+  active: boolean;
+  payload: any;
+}) => {
   if (active && payload && payload.length) {
     const data = payload[0].payload;
     return (
@@ -29,7 +45,7 @@ const CustomTooltip = ({ active, payload }: { active: boolean, payload: any }) =
 
 interface ResultsDisplayProps {
   data: Array<{
-    name: typeof categories[number];
+    name: (typeof categories)[number];
     x: number;
     y: number;
     quadrant: number;
@@ -41,8 +57,13 @@ interface ResultsDisplayProps {
   resetAssessment: () => void;
 }
 
-export default function ResultsDisplay({ data, resetAssessment }: ResultsDisplayProps) {
-  const [selectedCategory, setSelectedCategory] = useState<(typeof categories)[number] | null>(null);
+export default function ResultsDisplay({
+  data,
+  resetAssessment,
+}: ResultsDisplayProps) {
+  const [selectedCategory, setSelectedCategory] = useState<
+    (typeof categories)[number] | null
+  >(null);
 
   const displayData = selectedCategory
     ? data.filter((d) => d.name === selectedCategory)
@@ -86,14 +107,14 @@ export default function ResultsDisplay({ data, resetAssessment }: ResultsDisplay
               <Button
                 variant={selectedCategory === null ? "default" : "outline"}
                 size="sm"
-                onClick={() =>
-                  setSelectedCategory(null)
-                }
+                onClick={() => setSelectedCategory(null)}
               >
                 All Categories
               </Button>
               {(
-                Object.keys(categoryColors) as Array<typeof categories[number]>
+                Object.keys(categoryColors) as Array<
+                  (typeof categories)[number]
+                >
               ).map((cat) => (
                 <Button
                   key={cat as string}
