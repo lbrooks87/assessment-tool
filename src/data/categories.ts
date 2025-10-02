@@ -27,8 +27,8 @@ export const categoryAxes: Record<typeof categories[number], { xLabel: string; y
 };
 
 export const categoryColors: Record<typeof categories[number], `#${string}`> = {
-  "Community and Support Networks": "#8b5cf6",
-  "Social and Cultural Learning": "#3b82f6",
-  "Learning Preferences": "#10b981",
-  "Motivation and Problem-Solving": "#f59e0b"
+  "Community and Support Networks": "#8E00C2",
+  "Social and Cultural Learning": "#005A9E",
+  "Learning Preferences": "#00672B",
+  "Motivation and Problem-Solving": "#735400  "
 };

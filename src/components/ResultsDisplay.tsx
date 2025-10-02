@@ -165,7 +165,7 @@ export default function ResultsDisplay({
                             value: categoryAxes[data_pt.name]?.xLabel || "",
                             position: "insideBottom",
                             offset: -5,
-                            style: { fontSize: 13, textAnchor: "middle" },
+                            style: { fontSize: 18, textAnchor: "middle" },
                           }}
                         />
                         <YAxis
@@ -178,7 +178,7 @@ export default function ResultsDisplay({
                             angle: -90,
                             position: "insideLeft",
                             offset: 10,
-                            style: { fontSize: 13, textAnchor: "middle" },
+                            style: { fontSize: 18, textAnchor: "middle" },
                           }}
                         />
                         <ReferenceLine
@@ -202,25 +202,25 @@ export default function ResultsDisplay({
                           value="Quadrant 1"
                           position="insideTopRight"
                           offset={10}
-                          style={{ fontSize: 10, fill: "#888" }}
+                          style={{ fontSize: 14, fill: "#888" }}
                         />
                         <Label
                           value="Quadrant 2"
                           position="insideTopLeft"
                           offset={10}
-                          style={{ fontSize: 10, fill: "#888" }}
+                          style={{ fontSize: 14, fill: "#888" }}
                         />
                         <Label
                           value="Quadrant 3"
                           position="insideBottomLeft"
                           offset={10}
-                          style={{ fontSize: 10, fill: "#888" }}
+                          style={{ fontSize: 14, fill: "#888" }}
                         />
                         <Label
                           value="Quadrant 4"
                           position="insideBottomRight"
                           offset={10}
-                          style={{ fontSize: 10, fill: "#888" }}
+                          style={{ fontSize: 14, fill: "#888" }}
                         />
                       </ScatterChart>
                     </ResponsiveContainer>

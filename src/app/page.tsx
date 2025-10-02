@@ -32,7 +32,7 @@ export default function AssessmentPage() {
     });
 
     if (currentQuestion < questions.length - 1) {
-      setTimeout(() => setCurrentQuestion(currentQuestion + 1), 300);
+      setTimeout(() => setCurrentQuestion(currentQuestion + 1), 75);
     }
   };
 
