@@ -23,7 +23,7 @@ export default function AssessmentPage() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userResponses, setUserResponses] = useState<Array<number>>([]);
   const [showResults, setShowResults] = useState(false);
-
+  
   const handleResponse = (value: number) => {
     setUserResponses((responses) => {
       const newResponses = [...responses];

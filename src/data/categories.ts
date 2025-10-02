@@ -9,20 +9,20 @@ export default categories;
 
 export const categoryAxes: Record<typeof categories[number], { xLabel: string; yLabel: string }> = {
   "Community and Support Networks": {
-    xLabel: "Working Alone ↔ Working with Support",
-    yLabel: "Family & Community ↔ Programs & Services",
+    xLabel: "High Support ↔ Independent",
+    yLabel: "Natural/Family ↔ External/Programs",
   },
   "Social and Cultural Learning": {
-    xLabel: "Learning Alone ↔ Learning Together",
-    yLabel: "Stories & Experience ↔ Steps & Structure",
+    xLabel: "Individual ↔ Collective",
+    yLabel: "Relational/Stories ↔ Structured",
   },
   "Learning Preferences": {
-    xLabel: "Learning by Doing ↔ Learning by Watching",
-    yLabel: "Clear Path ↔ Open Exploration",
+    xLabel: "Hands-On/Doing ↔ Passive/Watching",
+    yLabel: "Structured ↔ Flexible",
   },
   "Motivation and Problem-Solving": {
-    xLabel: "One Step at a Time ↔ Seeing the Whole",
-    yLabel: "Personal Interest ↔ External Rewards",
+    xLabel: "Analytical/Step-by-step ↔ Intuitive/Big picture",
+    yLabel: "Intrinsic/Curiosity ↔ Extrinsic/Rewards",
   },
 };
 

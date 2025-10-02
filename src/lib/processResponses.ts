@@ -38,9 +38,12 @@ import questions from "@/data/questions";
         const avgY = cat.yCount > 0 ? cat.y / cat.yCount : 0;
 
         // Determine quadrant (1-4)
-        const quadrant = (avgX < 0 && avgY < 0) ? 1 :
+        //  2 | 1
+        // ---+---
+        //  3 | 4
+        const quadrant =  (avgX >= 0 && avgY >= 0) ? 1 :
                         (avgX < 0 && avgY >= 0) ? 2 :
-                        (avgX >= 0 && avgY < 0) ? 3 : 4;
+                        (avgX < 0 && avgY < 0) ? 3 : 4;
 
         const interpretation = interpretations[key][`q${quadrant}`];
 
